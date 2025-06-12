@@ -79,7 +79,7 @@
             <!-- Contenedor del video -->
             <div class="absolute top-0 left-0 w-full h-full z-0">
                 <video playsinline autoplay muted loop class="w-full h-full object-cover">
-                    <!-- VIDEO RESTAURADO A IMGUR Y CON MUTE PARA AUTOPLAY -->
+                    <!-- VIDEO ACTUALIZADO CON EL ENLACE DE IMGUR PARA LA PRUEBA -->
                     <source src="https://i.imgur.com/8lOf53v.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
@@ -339,7 +339,7 @@
 
     <script>
         // --- Gemini API Logic (For Training Hub only) ---
-        const API_KEY = "AIzaSyAB_qnD84imYAfJYWay1ercc4BTfvQs4Ko"; // API Key actualizada
+        const API_KEY = ""; // Provided by the environment
 
         async function callGemini(prompt, outputElement) {
             outputElement.innerHTML = '<div class="loader"></div>'; // Show loader
