@@ -339,7 +339,7 @@
 
     <script>
         // --- Gemini API Logic (For Training Hub only) ---
-        const API_KEY = ""; // Provided by the environment
+        const API_KEY = "AIzaSyAB_qnD84imYAfJYWay1ercc4BTfvQs4Ko"; // API Key actualizada
 
         async function callGemini(prompt, outputElement) {
             outputElement.innerHTML = '<div class="loader"></div>'; // Show loader
