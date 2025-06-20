@@ -290,16 +290,38 @@
                     Whether you're a seasoned veteran or have never touched a disc, we're always looking for new members with a positive attitude and a passion for sport. Come to one of our open practices!
                 </p>
                 <div class="mt-8 flex justify-center flex-wrap gap-4">
-                    <a href="mailto:flyingmoussakats@gmail.com?subject=Interested%20in%20Joining" 
-                       class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 text-lg inline-block">
-                        Contact Us & Join
-                    </a>
-                    <button id="recipe-button" class="gemini-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 text-lg inline-block">
-                        Get a Post-Game Moussaka Recipe
-                    </button>
-                </div>
-                <p class="mt-4 text-sm text-gray-400">Drop us an email, or generate a recipe while you think about it!</p>
-            </div>
+    <div class="flex flex-col items-center">
+        <form id="contact-form" class="mb-2 w-full max-w-xs">
+            <label for="email-subject" class="sr-only">Selecciona el asunto:</label>
+            <select id="email-subject" name="subject" class="block w-full py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-800 bg-white">
+                <option value="Interested in Joining the Team">Interesado en unirse al equipo</option>
+                <option value="General Inquiry">Consulta general</option>
+                <option value="Sponsorship Opportunities">Oportunidades de patrocinio</option>
+                <option value="Website Feedback">Comentarios sobre la web</option>
+            </select>
+        </form>
+
+        <button id="contact-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 text-lg w-full max-w-xs">
+            Contact Us &amp; Join
+        </button>
+    </div>
+
+    <button id="recipe-button" class="gemini-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 text-lg inline-block">
+        Get a Post-Game Moussaka Recipe
+    </button>
+</div>
+<p class="mt-4 text-sm text-gray-400">Drop us an email, or generate a recipe while you think about it!</p>
+
+<script>
+    // Script para manejar el botón de contacto con selección de asunto
+    document.getElementById('contact-button').addEventListener('click', function() {
+        const email = 'flyingmoussakats@gmail.com';
+        const subjectSelect = document.getElementById('email-subject');
+        const selectedSubject = subjectSelect.value;
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(selectedSubject)}`;
+        window.location.href = mailtoLink;
+    });
+</script>
         </section>
     </main>
     <!-- Footer -->
